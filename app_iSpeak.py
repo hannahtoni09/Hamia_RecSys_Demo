@@ -63,7 +63,7 @@ st.write("# iSpeak Course Recommendation System")
 st.write("Pick a course from the list and enjoy some new stuffs!")
 
 # select box
-title = st.selectbox("", data["title"])
+title = st.selectbox("Choose a course", data["title"])
 if title not in st.session_state.history:
     st.session_state.history.insert(0, title)
 update_las_viewed()
