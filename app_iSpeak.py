@@ -55,6 +55,7 @@ def update_las_viewed():
 st.sidebar.write("""
 This is a content based recommender system. Pick a course from the list or search for it and then wait for the recommendations.
 You will get six courses, posters and descriptions.
+Made by Hamia Research 
 """)
 
 # title
@@ -112,7 +113,7 @@ with st.spinner("Getting the best movies..."):
     recs, plots = recommend_image(title, similarity)
 
 # recommendation cols
-st.write("## Relevant courses....")
+st.write("## Students study this course also choose the following ....")
 # col1 = st.columns(1)
 # with col1:
 st.image(recs[0])
