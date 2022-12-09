@@ -11,7 +11,7 @@ if 'history' not in st.session_state:
     st.session_state.history = []
 
 # import preprocessed data
-data = pd.read_csv("C:/MachineLearning/Hamia_Recommendation_System/Hamia_RecSys/courses.csv")
+data = pd.read_csv("courses.csv")
 data['tags'] = data['name'] + " - " + data['description']
 data = data.rename(columns = {'name':'title'})
 #-----------------------------------------------
