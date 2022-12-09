@@ -54,7 +54,7 @@ def update_las_viewed():
 # sidebar
 st.sidebar.write("""
 This is a content based recommender system. Pick a course from the list or search for it and then wait for the recommendations.
-You will get six courses, posters and descriptions.
+You will get six courses, posters and descriptions. 
 Made by Hamia Research 
 """)
 
