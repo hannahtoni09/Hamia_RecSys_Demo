@@ -3,6 +3,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import numpy as np
+import sklearn
 # set page setting
 st.set_page_config(page_title='iSpeak Courses')
 
