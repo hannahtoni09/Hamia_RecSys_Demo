@@ -3,7 +3,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import numpy as np
-import sklearn
+
 # set page setting
 st.set_page_config(page_title='iSpeak Courses')
 
@@ -38,7 +38,7 @@ similarityCountVect = cosine_similarity(vector)
 
 
 from sklearn.feature_extraction.text import HashingVectorizer
-hash = HashingVectorizer(lowercase = True, stop_words = {'english'}, ngram_range = (1,1))
+hash = HashingVectorizer(lowercase = True, ngram_range = (1,1))
 vectorHash = hash.fit_transform(data['tags']).toarray()
 similarityHasingVect = cosine_similarity(vectorHash)
 
