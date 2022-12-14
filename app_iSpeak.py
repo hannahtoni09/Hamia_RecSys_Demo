@@ -28,7 +28,8 @@ similarityTfidVect = cosine_similarity(vectorTfid)
 
 
 from sklearn.feature_extraction.text import CountVectorizer
-cv = CountVectorizer(stop_words = 'english', lowercase = True)
+# cv = CountVectorizer(stop_words = 'english', lowercase = True)
+cv = CountVectorizer(lowercase = True)
 vector=cv.fit_transform(data['tags']).toarray()
 similarityCountVect = cosine_similarity(vector)
 
