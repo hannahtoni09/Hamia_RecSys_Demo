@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 import numpy as np
 # set page setting
-st.set_page_config(page_title='iSpeak Courses')
+st.set_page_config(page_title='iSpeak Courses and Quiz Recommender System Demo')
 
 
 # import preprocessed data
