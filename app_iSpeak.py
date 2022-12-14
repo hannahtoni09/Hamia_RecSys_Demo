@@ -28,14 +28,14 @@ similarityTfidVect = cosine_similarity(vectorTfid)
 
 
 from sklearn.feature_extraction.text import CountVectorizer
-# cv = CountVectorizer(stop_words = 'english', lowercase = True)
-cv = CountVectorizer(lowercase = True)
+cv = CountVectorizer(stop_words = 'english', lowercase = True)
 vector=cv.fit_transform(data['tags']).toarray()
 similarityCountVect = cosine_similarity(vector)
 
 
 from sklearn.feature_extraction.text import HashingVectorizer
-hash = HashingVectorizer(lowercase = True, stop_words = {'english'}, ngram_range = (1,1))
+# hash = HashingVectorizer(lowercase = True, stop_words = {'english'}, ngram_range = (1,1))
+hash = HashingVectorizer(lowercase = True, ngram_range = (1,1))
 vectorHash = hash.fit_transform(data['tags']).toarray()
 similarityHasingVect = cosine_similarity(vectorHash)
 
