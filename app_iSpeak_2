@@ -8,7 +8,7 @@ st.set_page_config(page_title='iSpeak Courses')
 
 
 # import preprocessed data
-data = pd.read_csv("C:/Users/DELL/Desktop/MOVIE_RECOMMENDATIOIN/courses.csv")
+data = pd.read_csv("courses.csv")
 data['tags'] = data['name'] + " - " + data['description']
 data = data.rename(columns = {'name':'title'})
 #-----------------------------------------------
@@ -18,7 +18,7 @@ data = data.rename(columns = {'name':'title'})
 #     sim = pickle.load(open(filename, 'rb'))
 #     return sim
 
-# similarity = importSim('C:/Users/DELL/Desktop/MOVIE_RECOMMENDATIOIN/similarity.pkl')
+# similarity = importSim('similarity.pkl')
 # ----------------------------------------------
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -42,7 +42,7 @@ res = np.multiply(similarityTfidVect, similarityCountVect )
 similarity = np.multiply(res, similarityHasingVect)
 
 # ----------------------------------------------
-quiz = pd.read_excel("C:/Users/DELL/Desktop/MOVIE_RECOMMENDATIOIN/quiz.xlsx")
+quiz = pd.read_excel("quiz.xlsx")
 quiz = quiz.rename(columns = {'name':'title'})
 
 #------
