@@ -6,7 +6,6 @@ import numpy as np
 # set page setting
 st.set_page_config(page_title='iSpeak Courses and Quiz Recommender System Demo')
 
-
 # import preprocessed data
 data = pd.read_csv("courses.csv")
 data['tags'] = data['name'] + " - " + data['description']
